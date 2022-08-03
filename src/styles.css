@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: linear-gradient( rgb(255, 255, 255) 0%, rgb(142, 212, 250) 37%, rgb(3, 114, 224) 100%);;
+    
+background: #2980B9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(50deg, #ffffff, #6DD5FA, #2179b4);  /* Chrome 10-25, Safari 5.1-6 */
+background: radial-gradient(rgb(53, 220, 235) 0%, rgb(58, 137, 255) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }

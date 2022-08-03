@@ -87,6 +87,8 @@ id:number|undefined;
           this.datos[user].apellidos=this.form.get('apellidos')?.value,
           this.datos[user].identificacion=this.form.get('identificacion')?.value
           this.form.reset();
+          this.id=undefined
+          this.accion='AGREGAR'
           Swal.fire({
             icon: 'info',
             title:'Editado',
