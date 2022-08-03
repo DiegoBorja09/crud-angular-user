@@ -68,7 +68,8 @@ id:number|undefined;
       identificacion:this.form.get('identificacion')?.value
     }
     if (this.id==undefined) {
-      this.datos.push(dato)
+      this.datos.push(dato);
+      this.form.reset();
       Swal.fire({
         icon: 'success',
         title:'Guardar',
@@ -77,7 +78,7 @@ id:number|undefined;
         showConfirmButton: false,
         
       })
-      this.form.reset
+      
       
     }else {
       for (let user in this.datos) {
@@ -85,6 +86,7 @@ id:number|undefined;
           this.datos[user].nombre=this.form.get('nombre')?.value,
           this.datos[user].apellidos=this.form.get('apellidos')?.value,
           this.datos[user].identificacion=this.form.get('identificacion')?.value
+          this.form.reset();
           Swal.fire({
             icon: 'info',
             title:'Editado',
@@ -93,7 +95,7 @@ id:number|undefined;
             timer:2000
             
           })
-          this.form.reset
+          
           
         }
         
