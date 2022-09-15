@@ -1,8 +1,7 @@
 <div style="text-align:center">
-
+    
     <img width="130" alt="Angular Logo" src="../assets/user.png" style="margin-top:30px;" />
 </div>
-
 <div class="row " style="margin:80px;">
     <div class="col-lg-6">
         <div class="container col-md-9">
@@ -25,7 +24,7 @@
 
                         </div>
                         <div style="text-align: center;">
-                            <button (click)="Guardar()" class="btn btn-info"
+                            <button (click)="Guardar()" class="btn btn-info center"
                                 [disabled]="this.form.invalid">Guardar</button>
                         </div>
                     </form>
@@ -34,49 +33,12 @@
 
         </div>
     </div>
-
-
     <div class="col-lg-6">
-        <div class="container col-md-9">
-            <div class="card">
-                <div class="card-header">
-                    <h3 style="text-align: center">{{accion2|uppercase}} USUARIO</h3>
-                </div>
-                <div class="card-body">
-                    <form [formGroup]="form2">
-                        <div class="form-group">
-                            <label for="">ID:</label>
-                            <input formControlName="id" type="text" class="form-control" name="id">
-                            <label for="">Nombre:</label>
-                            <input formControlName="nombre" type="text" class="form-control" name="nombre">
-                            <label for="">Apellidos:</label>
-                            <input formControlName="apellidos" type="text" class="form-control" name="apellidos">
-                            <label for="">identificacion:</label>
-                            <input formControlName="identificacion" type="text" class="form-control"
-                                name="identificacion">
 
-                        </div>
-                        <div style="text-align: center;">
-                            <button (click)="Guardar2()" class="btn btn-info"
-                                [disabled]="this.form2.invalid">Guardar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-
-        </div>
-    </div>
-</div>
-
-<div class="row " style="margin:80px;">
-
-    <div class="col-lg-6">
 
         <div class="card">
             <div class="card-header center">
-                <h3 style="text-align: center">USUARIOS</h3>
+                <h3 style="text-align: center">Usuarios</h3>
             </div>
             <div class="card-body">
                 <table class="table table-hover">
@@ -108,48 +70,7 @@
                 </table>
 
             </div>
-
         </div>
-    </div>
 
-    <div class="col-lg-6">
-
-
-        <div class="card">
-            <div class="card-header center">
-                <h3 style="text-align: center">USUARIOS</h3>
-            </div>
-            <div class="card-body">
-                <table class="table table-hover">
-                    <thead>
-                        <tr class="text-center">
-                            <th>ID</th>
-                            <th>NOMBRE</th>
-                            <th>APELLIDO</th>
-                            <th>IDENTIFICACION</th>
-                            <th>ACCION</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let user of datos2; let i=index" class="text-center">
-                            <td>{{user.id}}</td>
-                            <td>{{user.nombre}}</td>
-                            <td>{{user.apellidos}}</td>
-                            <td>{{user.identificacion}}</td>
-
-                            <td>
-                                <i (click)="Editar2(user)" class="far fa-edit text-info" style="margin-right:15px ;"></i>
-                                <i (click)="Delete2(i)" class="far fa-trash-alt text-danger"></i>
-                            </td>
-
-
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-
-        </div>
     </div>
 </div>
